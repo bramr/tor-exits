@@ -1,0 +1,34 @@
+{
+    "name": "bramr/tor-exits",
+    "type": "library",
+    "description": "Retrieves tor exit list from the tor project and make that available in a convenient way.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bram Rohde",
+            "email": "bramr@outlook.com",
+            "homepage": "https://github.com/bramr"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "psr/log": "~1.0",
+        "psr/http-message": "~1.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "php-mock/php-mock": "~1.0",
+        "monolog/monolog": "^1.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "BramR\\TorExits\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
