@@ -31,7 +31,7 @@ interface ParserInterface extends LoggerAwareInterface
      * by default get the data stream from the collector
      *
      * @param \PSR\Http\Message\StreamInterface $data
-     * @return IpList
+     * @return \BramR\TorExits\IpList
      */
     public function parse(StreamInterface $data = null);
 }
