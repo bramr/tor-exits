@@ -23,7 +23,7 @@ class IpListTest extends \PHPUnit_Framework_TestCase
     {
         $ipList = new IpList();
 
-        $ipList->add('131.021.111.100');
+        $ipList->add('131.21.111.100');
         $ipList->add('131.121.111.100');
 
         $this->assertEquals(['131.21.111.100','131.121.111.100'], $ipList->toArray());
@@ -33,7 +33,7 @@ class IpListTest extends \PHPUnit_Framework_TestCase
     {
         $ipList = new IpList(['131.21.111.100']);
 
-        $ipList->add(['131.021.111.100','131.21.111.100']);
+        $ipList->add(['131.21.111.100','131.21.111.100']);
 
         $this->assertEquals(['131.21.111.100'], $ipList->toArray());
     }
@@ -88,7 +88,7 @@ class IpListTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($ipList->doesNotContain('12.23.27.23'));
         $this->assertTrue($ipList->doesNotContain('google.com'));
-        $this->assertFalse($ipList->doesNotContain('013.034.066.066'));
+        $this->assertFalse($ipList->doesNotContain('13.34.66.66'));
     }
 
     public function testEmpty()
