@@ -2,6 +2,8 @@
 
 A simple library to retreive a convenient list of current [Tor](https://torproject.org) exit nodes/relays.
 
+[![Build Status](https://scrutinizer-ci.com/g/bramr/tor-exits/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bramr/tor-exits/build-status/master) [![Code Coverage](https://scrutinizer-ci.com/g/bramr/tor-exits/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bramr/tor-exits/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bramr/tor-exits/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bramr/tor-exits/?branch=master)
+
 ## Installation
 
 The easiest way to install tor-exits is with [Composer](https://getcomposer.org).
