@@ -72,7 +72,7 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
      */
     public function add($addresses)
     {
-        if (is_string($addresses)) {
+        if (! is_array($addresses)) {
             $addresses = (array) $addresses;
         }
 
