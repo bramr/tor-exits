@@ -13,7 +13,7 @@ class TorProjectIpFilter extends \php_user_filter
     public function filter($in, $out, &$consumed, $closing)
     {
         while ($bucket = stream_bucket_make_writeable($in)) {
-            $bucket  = $this->processBucket($bucket);
+            $bucket = $this->processBucket($bucket);
             $consumed = $bucket->datalen;
             stream_bucket_prepend($out, $bucket);
         }

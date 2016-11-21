@@ -50,8 +50,7 @@ abstract class BaseParser implements ParserInterface
     public function getParseWarningThreshold()
     {
         return is_null($this->parseWarningThreshold) ?
-            self::DEFAULT_PARSE_WARNING_THRESHOLD :
-            $this->parseWarningThreshold;
+            self::DEFAULT_PARSE_WARNING_THRESHOLD : $this->parseWarningThreshold;
     }
 
     /**
@@ -77,7 +76,7 @@ abstract class BaseParser implements ParserInterface
      */
     protected function getStreamData(StreamInterface $data = null)
     {
-        if (! is_null($data)) {
+        if (!is_null($data)) {
             return $data;
         }
         if ($this->getCollector()) {

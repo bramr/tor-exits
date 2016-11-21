@@ -20,7 +20,7 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
     public function __construct(array $addresses = array())
     {
         $this->position = 0;
-        if (! empty($addresses)) {
+        if (!empty($addresses)) {
             $this->add($addresses);
         }
     }
@@ -49,12 +49,12 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
     public static function fromParserWithCache(ParserInterface $parser, IpListCacheInterface $cache)
     {
         $ipList = $cache->fetch();
-        if (! is_null($ipList)) {
+        if (!is_null($ipList)) {
             return $ipList;
         } else {
             $ipList = self::fromParser($parser);
-            if (! empty($ipList)) {
-                if (! $cache->store($ipList)) {
+            if (!empty($ipList)) {
+                if (!$cache->store($ipList)) {
                     throw new \RuntimeException('Failed storing new tor exit node list in cache.');
                 }
             }
@@ -72,13 +72,13 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
      */
     public function add($addresses)
     {
-        if (! is_array($addresses)) {
+        if (!is_array($addresses)) {
             $addresses = (array) $addresses;
         }
 
         foreach ($addresses as $address) {
             $ip = ip2long($address);
-            if ($ip && ! isset($this->addressInList[$ip])) {
+            if ($ip && !isset($this->addressInList[$ip])) {
                 $this->addresses[] = $ip;
                 $this->addressInList[$ip] = true;
             }
@@ -95,7 +95,7 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
      */
     public function remove($addresses)
     {
-        if (! is_array($addresses)) {
+        if (!is_array($addresses)) {
             $addresses = (array) $addresses;
         }
 
@@ -142,7 +142,7 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
      */
     public function doesNotContain($address)
     {
-        return ! $this->contains($address);
+        return !$this->contains($address);
     }
 
     /**

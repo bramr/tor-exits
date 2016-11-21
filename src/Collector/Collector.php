@@ -55,7 +55,7 @@ class Collector implements CollectorInterface
     {
         if ($this->getLocation()) {
             try {
-                $response =  $this->client->request('GET', $this->getLocation(), ['stream' => true]);
+                $response = $this->client->request('GET', $this->getLocation(), ['stream' => true]);
                 if ($response instanceof ResponseInterface) {
                     if ($response->getStatusCode() === 200) {
                         return $response->getBody();
