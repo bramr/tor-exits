@@ -95,7 +95,7 @@ class IpList implements \Countable, \Iterator, \Serializable, \JsonSerializable
      */
     public function remove($addresses)
     {
-        if (is_string($addresses)) {
+        if (! is_array($addresses)) {
             $addresses = (array) $addresses;
         }
 
