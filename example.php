@@ -10,7 +10,7 @@ use BramR\TorExits\Parser\TorProjectParser;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-$clientIp = '192.42.116.16';
+$clientIp = '192.42.116.17';
 
 $logger = new Logger('tor-exits');
 $logger->pushHandler(new StreamHandler('/tmp/tor-exits.log', Logger::INFO));
